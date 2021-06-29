@@ -1,6 +1,6 @@
 window.onload = ()=> {
 
-    fetch('http://url-shortner-exp.herokuapp.com/urls')
+    fetch('https://url-shortner-exp.herokuapp.com/urls')
     .then(res=>{
         return res.json();
     }).then(res=>{
@@ -13,7 +13,7 @@ window.onload = ()=> {
         const formele = document.querySelector("#form");
         const formData = new FormData(formele);
         if(validate(formData.get('longUrl'))){
-            const request = new Request('http://url-shortner-exp.herokuapp.com/url', {
+            const request = new Request('https://url-shortner-exp.herokuapp.com/url', {
                 method: 'POST',
                 headers: new Headers({
                     'Content-Type': 'application/json'
@@ -29,13 +29,13 @@ window.onload = ()=> {
             document.querySelector("#output").innerText = "Invalid Url";
         }
 
-        fetch('http://url-shortner-exp.herokuapp.com/urls')
+        fetch('https://url-shortner-exp.herokuapp.com/urls')
         .then(res=>{
             return res.json();
         }).then(res=>{
             let stg = '';
             for(const key in res){
-                stg += 'http://url-shortner-exp.herokuapp.com/' + key + ' : ' + res[key] + '\n'
+                stg += 'https://url-shortner-exp.herokuapp.com/' + key + ' : ' + res[key] + '\n'
             }
             document.querySelector("#dashboard").innerText = stg;
         })

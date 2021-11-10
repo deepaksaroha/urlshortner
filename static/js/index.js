@@ -24,7 +24,7 @@ window.onload = ()=> {
         })
 
     const btn = document.querySelector("#shorten-btn");
-    btn1.addEventListener("click", (event)=>{
+    btn.addEventListener("click", (event)=>{
         event.preventDefault();
         const formele = document.querySelector("#form");
         const formData = new FormData(formele);

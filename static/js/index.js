@@ -24,7 +24,8 @@ window.onload = ()=> {
         event.preventDefault();
         const formele = document.querySelector("#form");
         const formData = new FormData(formele);
-        if(validate(formData.get('longUrl'))){
+        let longUrl = formData.get('longUrl');
+        if(validate(longUrl)){
 
             const request = new Request('https://url-shortner-exp.herokuapp.com/url', {
                 method: 'POST',
@@ -38,20 +39,12 @@ window.onload = ()=> {
                 return res.json();
             }).then((res)=>{
                 document.querySelector("#output-url").innerText = res.shortUrl;
+                formRow(res.id, longUrl);
             });
             
         }else{
             document.querySelector("#output-url").innerText = "Invalid Url";
         }
-
-        fetch('https://url-shortner-exp.herokuapp.com/urls')
-        .then(res=>{
-            return res.json();
-        }).then(res=>{
-            for(const key in res){
-                formRow(key, res[key]);
-            }
-        })
     });
 
     const cpy = document.querySelector("#copy-btn");

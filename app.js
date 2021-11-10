@@ -22,6 +22,7 @@ app.post('/url', (req, res, next)=>{
     const shortUrlId = shortid.generate();
     urls[shortUrlId] = req.body.longUrl;
     res.send({
+        id: shortUrlId,
         shortUrl: `https://url-shortner-exp.herokuapp.com/u/${shortUrlId}`
     });
 })

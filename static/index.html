@@ -9,16 +9,24 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="main">
-        <div class="container1">
+    <div class="main">        
+        <div id="site-head" class="sub-box">
+            The URL Shortner
+        </div>
+        <div id="input-box" class="sub-box">
             <form id="form">
-                <input type="text" name="longUrl">
-                <button id="btn">Shorten</button>
+                <input id="input-url" type="text" name="longUrl"><button id="shorten-btn">Shorten</button>
             </form>
         </div>
-        <textarea id="output" readonly></textarea>
-        <button id="copy">Copy</button>
-        <div id="dashboard"></div>
+        <div id="output-box" class="sub-box">
+            <div>
+                <div id="output-url"></div>
+                <button id="copy-btn">Copy</button>
+            </div>
+        </div>
+        <div id="dashboard">
+
+        </div>
     </div>
 </body>
 </html>

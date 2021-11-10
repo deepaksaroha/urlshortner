@@ -1,31 +1,67 @@
 body{
     margin: 0;
-    padding: 0;
 }
 
-.main{
+.sub-box{
     text-align: center;
-    background-color: rgb(49, 49, 126);
-    padding: 20px;
+    padding: 10vh 0;
 }
 
-.container1{
-    margin-bottom: 40px;
+#site-head{
+    font-size: 50px;
+    padding: 4vh 0;
+    background-color: rgb(245, 245, 245);
+    color: rgb(17, 97, 172);
 }
 
-#form input{
-    border-radius: 5px;
-    border: 2px solid rgb(42, 22, 151);
+#input-box{
+    background-color: rgb(165, 211, 241);
 }
 
-#output{
-    border: 2px solid rgb(42, 22, 151);
-    background-color: aliceblue;
-    width: fit-content;
-    border-radius: 5px;
+#output-box{
+    background-color: rgb(245, 245, 245);
+}
+
+#input-url{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 2em;
+    width: 80%;
+    font-size: 20px;
+}
+
+#output-url{
+    height: 2em;
+    width: 48em;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px grey;
+    margin: 0 auto;
+}
+
+#shorten-btn{
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    height: 2em;
+    background-color: rgb(44, 106, 165);
+    padding: 0 20px;
+    color: white;
+}
+
+#copy-btn{
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    height: 2em;
+    background-color: rgb(44, 106, 165);
+    padding: 0 20px;
+    color: white;
 }
 
 #dashboard{
-    color: whitesmoke;
-    text-align: left;
+    background-color: rgb(165, 211, 241);
+    min-height: 100px;
 }

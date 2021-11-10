@@ -49,9 +49,15 @@ window.onload = ()=> {
 
     const cpy = document.querySelector("#copy-btn");
     cpy.addEventListener("click", ()=>{
-        const copytext = document.querySelector("#output-url");
-        copytext.select();
+
+        const r = document.createRange();
+        const w=document.getElementById("output-url");  
+        r.selectNodeContents(w);  
+        const sel=window.getSelection(); 
+        sel.removeAllRanges(); 
+        sel.addRange(r);
         document.execCommand("copy");
+
     })
 
     function validate(url){

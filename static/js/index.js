@@ -1,16 +1,12 @@
 window.onload = ()=> {
 
     function formRow(key, url){
-        const rowBox = document.createElement('div');
-        rowBox.style.width = '80%';
         const urlBox = document.createElement('div');
         const shortBox = document.createElement('div');
-        shortBox.style.float = 'right';
         urlBox.innerText = url;
         shortBox.innerText = 'https://url-shortner-exp.herokuapp.com/'+key;
-        rowBox.appendChild(urlBox);
-        rowBox.appendChild(shortBox);
-        document.querySelector("#dashboard").appendChild(rowBox);
+        document.querySelector("#dashboard").appendChild(urlBox);
+        document.querySelector("#dashboard").appendChild(shortBox);
     }
 
 

@@ -41,11 +41,11 @@ window.onload = ()=> {
             fetch(request).then((res)=>{
                 return res.json();
             }).then((res)=>{
-                document.querySelector("#output").innerText = res.shortUrl;
+                document.querySelector("#output-url").innerText = res.shortUrl;
             });
             
         }else{
-            document.querySelector("#output").innerText = "Invalid Url";
+            document.querySelector("#output-url").innerText = "Invalid Url";
         }
 
         fetch('https://url-shortner-exp.herokuapp.com/urls')

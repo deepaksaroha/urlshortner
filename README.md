@@ -14,3 +14,24 @@ This application takes a url from user as input and returns a smaller url. It al
 <li>Heroku</li>
 
 ## API Endpoints
+```
+POST https://url-shortner-exp.herokuapp.com/url
+Sample Request Body:
+{
+	"longUrl":"https://eportal.incometax.gov.in/iec/foservices/#/pre-login/itrStatus"
+}
+
+Sample Response Body :
+{
+  "id": "8_jdELCCS"
+  "shortUrl": "https://url-shortner-exp.herokuapp.com/u/8_jdELCCS"
+}
+```
+
+```
+GET https://url-shortner-exp.herokuapp.com/api/urls/shortUrlID
+
+If shortUrlID is valid Corresponding actual URL will be opened.
+
+Status : 404 (URL does not exist)
+```
